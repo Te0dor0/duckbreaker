@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jogue Duck Breaker, um divertido jogo de quebrar blocos com um toque de pato!">
+    <title>Duck Breaker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu">
+        <img id="logo" src="assets_task_01jw51wdjeevwreh7qzny9kb00_1748221502_img_3.webp" alt="Logotipo do Duck Breaker">
+        <h1>Duck Breaker</h1>
+        <p>Escolha sua dificuldade e quebre todos os blocos com seu pato!</p>
+        <button onclick="startGame('facil')">Fácil</button>
+        <button onclick="startGame('medio')">Médio</button>
+        <button onclick="startGame('dificil')">Difícil</button>
+        <button onclick="showInstructions()">Como Jogar</button>
+        <div id="instructions" style="display: none;">
+            <h2>Como Jogar</h2>
+            <p>Use as teclas de seta para mover a raquete e rebater a bola. Quebre todos os blocos para avançar de fase!</p>
+        </div>
+    </div>
+    <canvas id="gameCanvas" style="display: none;"></canvas>
+    <script src="scripts.js"></script>
+    <script>
+        function showInstructions() {
+            document.getElementById('instructions').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

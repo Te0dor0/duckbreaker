@@ -1,0 +1,139 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(to bottom, #000033, #000066);
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo {
+    width: 200px;
+    margin: 20px auto;
+    transition: transform 0.3s;
+}
+
+#logo:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 36px;
+    color: #FFD700; /* Amarelo-laranja do logotipo */
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+button {
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button.easy {
+    background-color: green;
+}
+
+button.medium {
+    background-color: orange;
+}
+
+button.hard {
+    background-color: red;
+}
+
+button.easy:hover {
+    background-color: darkgreen;
+    transform: scale(1.05);
+}
+
+button.medium:hover {
+    background-color: darkorange;
+    transform: scale(1.05);
+}
+
+button.hard:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+#instructions {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+canvas {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid white;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+#gameOverScreen h1 {
+    font-size: 36px;
+    color: #ff4444;
+    animation: pulse 1s infinite;
+}
+
+#victoryScreen h1 {
+    font-size: 36px;
+    color: #00ff00;
+    animation: pulse 1s infinite;
+}
+
+#scoreMessage {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #FFD700;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+    button {
+        width: 80%;
+        margin: 10px auto;
+    }
+    #menu {
+        padding: 10px;
+    }
+    canvas {
+        width: 100%;
+        max-width: 480px;
+    }
+}
